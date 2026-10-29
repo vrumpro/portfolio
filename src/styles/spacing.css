@@ -1,0 +1,35 @@
+/* Portfolio spacing. Product-screen internals and transition coordinates retain their source geometry. */
+:root{
+ --space-6:6px;--space-12:12px;--space-20:20px;--space-24:24px;
+ --space-32:32px;--space-42:42px;--space-64:64px;--space-128:128px;--space-256:256px;
+ --page-gutter:var(--space-64);
+}
+.page-surface{--space:var(--page-gutter)}
+.page-surface .case-page{--case-space:var(--page-gutter)}
+.page-surface .case-width{width:min(1680px,calc(100% - var(--page-gutter)*2))}
+.page-surface .case-context,.page-surface .case-page .case-decision{margin-block:var(--space-128)}
+.page-surface .case-solutions{margin-top:var(--space-128)}
+.page-surface .case-columns{column-gap:var(--space-42)}
+.page-surface .case-page .case-decision{column-gap:var(--space-32)}
+.page-surface .case-screen-group{margin-top:var(--space-64)}
+.page-surface .case-screen-group h3{margin-bottom:var(--space-24)}
+.page-surface .case-cover-more{bottom:var(--space-42)}
+.page-surface .project-next-link .next-countdown{bottom:var(--space-42)}
+@media(max-width:1100px){
+ :root{--page-gutter:var(--space-42)}
+}
+@media(max-width:800px){
+ :root{--page-gutter:var(--space-24)}
+ html{scroll-padding-top:var(--space-128)}
+ .page-surface .site-header{left:0;right:0;width:100%;height:var(--space-64);min-height:var(--space-64);padding-inline:var(--page-gutter)}
+ .case-surface .site-header{background:var(--project-background);color:var(--project-header-ink);pointer-events:auto}
+ .page-surface .site-header a{min-height:var(--space-42);display:inline-flex;align-items:center}
+ .page-surface .case-context,.page-surface .case-page .case-decision{margin-block:var(--space-64)}
+ .page-surface .case-solutions{margin-top:var(--space-64)}
+ .page-surface .case-columns{gap:var(--space-24)}
+ .page-surface .case-screen-group{margin-top:var(--space-42)}
+ .page-surface .case-cover-more,.page-surface .project-next-link .next-countdown{bottom:var(--space-32)}
+ .home-projects .mobile-gallery{top:var(--space-128);left:var(--page-gutter);right:var(--space-12)}
+ .home-projects .project-selector{top:calc(var(--space-64) + var(--space-12))}
+}
+@media(max-width:380px){:root{--page-gutter:var(--space-20)}}

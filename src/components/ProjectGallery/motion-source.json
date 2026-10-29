@@ -1,0 +1,54 @@
+{
+  "source": "https://robin-noguier.com/",
+  "inspected": "2026-10-29",
+  "publicBundleComponents": [
+    "Qt (page progress)",
+    "bt (plane state changes)",
+    "pt (plane shaders)",
+    "home and project viewport masks"
+  ],
+  "timings": {
+    "waitBeforeChangePage": 300,
+    "planeDuration": 820,
+    "pageDuration": 1000,
+    "returnDuration": 1400,
+    "returnSceneReset": 900
+  },
+  "curves": {
+    "plane": [
+      0.4,
+      0,
+      0.3,
+      1
+    ],
+    "page": [
+      0.6,
+      0,
+      0.18,
+      1
+    ],
+    "return": [
+      0.75,
+      0,
+      0.25,
+      1
+    ]
+  },
+  "verification": "GPU matrices and frame sequences captured from the running reference in .runtime/reference-motion. Own projects and logo textures are retained.",
+  "scroll": {
+    "source": "Public st / pt / worker and Content / se components",
+    "heroWorldYPerPixel": 0.0004,
+    "nextWorldYPerRemainingPixel": -0.0015,
+    "heroScalePerDistance": -0.25,
+    "heroRotationPerDistance": -0.2,
+    "nextFrameScale": 0.85,
+    "nextFrameRotation": 0.1,
+    "nextPhotoScale": 1.15,
+    "nextHintHeight": 71,
+    "nextDelayMs": 5000,
+    "desktopAutoOpen": true,
+    "mobileAutoOpen": false,
+    "note": "Uses native document scrolling; full UI screenshots translate without source-image cropping. White case covers and official logos are portfolio content choices. User revision: fixed clipped canvas, 55ms geometric smoothing, native CSS view-timeline screenshots; cancelled countdown on reverse scroll.",
+    "nextProgress": "Five-second circular arrow indicator"
+  }
+}

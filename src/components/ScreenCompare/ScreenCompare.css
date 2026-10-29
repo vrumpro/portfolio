@@ -1,0 +1,13 @@
+.screen-comparison{width:100%;min-width:0}
+.comparison-stage{position:relative;width:100%;aspect-ratio:8/5;overflow:hidden;isolation:isolate;background:#fff;border-radius:16px;cursor:col-resize;touch-action:pan-y;user-select:none;box-shadow:0 12px 40px #2024380d}
+.comparison-stage img{display:block;position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center top;border-radius:0;pointer-events:none}
+.comparison-after{position:absolute;inset:0;clip-path:inset(0 0 0 var(--split));pointer-events:none}
+.comparison-divider{position:absolute;z-index:2;inset-block:0;left:var(--split);width:2px;transform:translateX(-50%);background:linear-gradient(transparent,#ffffffed 8%,#fff 92%,transparent);box-shadow:0 0 8px #191b3020;pointer-events:none}
+.comparison-divider span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:58px;height:40px;color:#3d3b47;background:#ffffffed;backdrop-filter:blur(12px);border-radius:24px;box-shadow:0 4px 18px #181b3026,0 1px 3px #181b3014;transition:transform .25s,background .25s,color .25s}
+.comparison-divider svg{width:32px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.comparison-range{pointer-events:none;position:absolute;z-index:3;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:col-resize;touch-action:pan-y}
+.comparison-stage:hover .comparison-divider span,.is-dragging .comparison-divider span{transform:translate(-50%,-50%) scale(1.08);background:#fff}
+.comparison-stage:has(.comparison-range:focus-visible) .comparison-divider span{background:#59506f;color:#fff}
+.compact{max-width:288px;margin:64px auto}.compact .comparison-stage{max-width:var(--original-width);aspect-ratio:var(--original-ratio);border-radius:10px}
+@media(max-width:700px){.comparison-stage{border-radius:12px}.comparison-divider span{width:48px;height:36px}.compact{margin-block:32px}}
+@media(prefers-reduced-motion:reduce){.comparison-divider span{transition:none}}

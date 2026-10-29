@@ -1,0 +1,28 @@
+[
+  {
+    "file": "sokolov.svg",
+    "source": "https://sokolov.ru/",
+    "usage": "Official header SVG, original paths and computed brand color; verified 2026-10-29"
+  },
+  {
+    "file": "wikkeo.svg",
+    "source": "https://wikkeo.com/",
+    "usage": "Official header SVG, original paths and computed brand color; verified 2026-10-29"
+  },
+  {
+    "file": "versta.svg",
+    "source": "D:/Projects/leadgen/apps/frontend/public/studio/logo-light.svg",
+    "usage": "Original project wordmark"
+  },
+  {
+    "file": "atlas.svg",
+    "source": "https://atlasvpn.app/",
+    "usage": "Original site wordmark SVG"
+  },
+  {
+    "file": "indrive.svg",
+    "source": "https://company.indrive.com/",
+    "asset": "https://cdn.prod.website-files.com/6a3912f6feb0e8f6db9bc388/6a4f81aa6eb03c91f5074def_logo-name--dark.svg",
+    "usage": "Official corporate-site wordmark SVG, unchanged; retrieved 2026-10-29"
+  }
+]

@@ -1,0 +1,36 @@
+/* Viewport masks follow the original page progress; there is no root zoom or slide. */
+.reference-transition{position:fixed;inset:0;z-index:1000;pointer-events:auto;overflow:hidden;isolation:isolate}
+.reference-transition-background,.reference-transition-secondary,.reference-transition-return{position:absolute;inset:0;pointer-events:none}
+.reference-transition-background{z-index:0}.reference-transition-secondary{z-index:1}
+.reference-transition-scene{position:absolute;inset:0;z-index:2;pointer-events:none}
+.reference-transition-scene canvas{display:block;width:100%;height:100%}
+.reference-transition-old{position:absolute;inset:0;z-index:3;overflow:hidden;pointer-events:none}
+.reference-transition-old>.page-surface{position:relative;min-height:100%;width:100%}
+.reference-transition-old .site-header{position:fixed}
+.reference-transition-old .home-projects{background:transparent!important}
+.reference-transition-old .case-cover{background:transparent!important}
+.reference-transition-old .webgl-gallery,.reference-transition-old .case-poster{visibility:hidden}
+.reference-transition-return{z-index:4}
+.reference-transition-native{position:fixed!important;inset:0!important;width:100%!important;height:100svh!important;overflow:hidden!important;z-index:1004!important;pointer-events:none!important;isolation:isolate}
+.reference-transition-native .case-cover,.reference-transition-native .home-projects{background:transparent!important}
+.reference-transition-native .case-poster,.reference-transition-native .webgl-gallery{visibility:hidden}
+.reference-transition-native .site-header{position:fixed}
+.reference-transition-native .case-cover-title{will-change:transform}
+.reference-transition-native.return-home{z-index:1006!important}
+.reference-transition-native .case-cover-more{opacity:var(--case-button-opacity,1)}
+.reference-transition-mobile-card{position:absolute;z-index:2;overflow:hidden;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.reference-transition{display:none}}
+
+.reference-transition-old>.page-surface,.reference-transition-native{background:transparent!important}
+.reference-transition.case-case .reference-transition-old .case-poster{visibility:visible}
+.reference-transition-old .site-header{transform:translateY(var(--old-scroll,0px))}
+
+.reference-transition-native.return-home .home-projects{background:var(--gallery-bg)!important}
+.reference-transition-native.return-home .webgl-gallery{visibility:visible}
+html{scrollbar-width:none}html::-webkit-scrollbar{display:none}
+
+.reference-transition-mobile-card>.preview-cover,.reference-transition-mobile-card>.brand-cover{position:absolute;inset:0;width:100%;height:100%}
+
+.reference-transition.case-case .reference-transition-scene{z-index:5}
+.reference-transition.case-case .reference-transition-old .project-next .case-poster,.reference-transition.case-case .reference-transition-old .project-next-artwork{visibility:hidden}
+.reference-transition.case-case .reference-transition-old .project-next-link{background:transparent}

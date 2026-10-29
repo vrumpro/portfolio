@@ -1,0 +1,26 @@
+.store-animation{width:100%;max-width:390px;margin-inline:auto}
+.demo-screen{position:relative;display:block;width:100%;padding:0;border:0;border-radius:20px;overflow:hidden;background:white;cursor:pointer;isolation:isolate;aspect-ratio:390/844}
+.demo-screen:focus-visible{outline:3px solid #223bdd;outline-offset:4px}
+.demo-screen img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.demo-dimmer{position:absolute;inset:0;background:#14203b55;opacity:0;animation:dim-store 8s linear infinite}
+.demo-sheet{position:absolute;inset:5% 0 0;z-index:1;border-radius:20px 20px 0 0;overflow:hidden;padding-top:16px;background:#fff;box-shadow:0 -8px 28px #13244c24;transform:translateY(106%);animation:reveal-sheet 8s cubic-bezier(.22,1,.36,1) infinite}
+.sheet-grip{position:absolute;top:6px;left:45%;height:4px;width:10%;border-radius:4px;background:#dfe2ea}
+.demo-sheet .demo-details{width:100%;height:100%;object-fit:contain;object-position:top}
+.demo-tap{position:absolute;z-index:2;width:24px;height:24px;margin:-12px 0 0 -12px;border-radius:50%;background:#3246e6aa;opacity:0;pointer-events:none}
+.demo-tap:after{content:'';position:absolute;inset:-9px;border-radius:50%;background:#3246e62e}
+.demo-tap-open{left:61%;top:14%;animation:tap-metrics 8s linear infinite}
+.demo-tap-back{left:5.5%;top:9%;animation:tap-back 8s linear infinite}
+.demo-sheet,.demo-tap,.demo-dimmer{animation-play-state:paused}
+.is-running .demo-sheet,.is-running .demo-tap,.is-running .demo-dimmer{animation-play-state:running}
+.is-manual .demo-sheet{animation:none;transform:translateY(106%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.is-manual.show-details .demo-sheet{transform:translateY(0)}
+.is-manual .demo-dimmer{animation:none;transition:opacity .4s;opacity:0}
+.is-manual.show-details .demo-dimmer{opacity:1}
+.is-manual .demo-tap{display:none}
+@keyframes reveal-sheet{0%,28%,88%,100%{transform:translateY(106%)}38%,75%{transform:translateY(0)}}
+@keyframes dim-store{0%,28%,88%,100%{opacity:0}38%,75%{opacity:1}}
+@keyframes tap-metrics{0%,15%,30%,100%{opacity:0;transform:scale(1)}22%{opacity:1;transform:scale(1)}26%{opacity:1;transform:scale(.7)}29%{opacity:0;transform:scale(1.4)}}
+@keyframes tap-back{0%,65%,79%,100%{opacity:0;transform:scale(1)}70%{opacity:1;transform:scale(1)}74%{opacity:1;transform:scale(.7)}78%{opacity:0;transform:scale(1.4)}}
+@media(prefers-reduced-motion:reduce){.demo-sheet,.demo-dimmer{animation:none}.is-manual .demo-sheet,.is-manual .demo-dimmer{transition:none}.demo-tap{display:none}}
+/* The source capture includes a browser scrollbar; exclude its outer gutter. */
+.demo-sheet .demo-details{clip-path:inset(0 4% 0 0)}

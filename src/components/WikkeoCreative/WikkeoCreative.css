@@ -1,0 +1,24 @@
+.wikkeo-creative{position:relative;display:grid;align-items:center;justify-content:center;gap:var(--space-32);padding:var(--space-32);overflow:hidden;isolation:isolate;background:#edf0ff;border-radius:24px;min-width:0}
+.wikkeo-creative:before{content:"";position:absolute;z-index:-1;width:75%;aspect-ratio:1;border-radius:50%;background:#ffffff65;left:-24%;top:-35%;pointer-events:none}
+.wikkeo-creative:after{content:"";position:absolute;z-index:-1;width:65%;aspect-ratio:1;border-radius:50%;background:#ffffff40;right:-23%;bottom:-50%;pointer-events:none}
+.store-comparison,.product-comparison{background:#e7edff;display:block;padding:var(--space-24)}
+.product-comparison{background:#e8edf0}
+.comparison-window{width:100%;filter:drop-shadow(0 18px 22px #172f5e16)}
+.comparison-window :deep(.comparison-stage){aspect-ratio:1.6;border-radius:14px}
+.creative-phone{width:100%;max-width:330px;min-width:0;justify-self:center}
+.creative-phone :deep(.screen-surface){box-shadow:0 24px 40px -16px #12245132;border-radius:20px}
+.creative-details{width:100%;min-width:0;max-width:390px;display:grid;gap:var(--space-32);justify-self:center;align-content:center}
+.metrics,.search,.purchase,.discounts{grid-template-columns:repeat(2,minmax(0,1fr))}
+.metrics{background:#e8edff}.metrics :deep(.demo-screen){box-shadow:0 24px 40px -16px #12245132}
+.search{background:#f0f1f6}.search .creative-details{gap:var(--space-64)}
+.discounts{background:#e9edff}
+.variants{grid-template-columns:repeat(2,minmax(0,392px));gap:var(--space-20);padding:var(--space-24) var(--space-20);background:#f6f1dc;align-items:start}
+.purchase{background:#e8edf6}.purchase .creative-details{gap:var(--space-64)}
+@media(max-width:600px){
+ .wikkeo-creative{padding:var(--space-24) var(--space-20);gap:var(--space-32);border-radius:20px}
+ .store-comparison,.product-comparison{padding:var(--space-12)}
+ .metrics,.search,.purchase,.discounts,.variants{grid-template-columns:minmax(0,1fr)}
+ .creative-phone{max-width:330px}.creative-details{max-width:358px}
+ .search .creative-details{order:2;gap:var(--space-20)}
+ .metrics .creative-details,.purchase .creative-details{gap:var(--space-20)}
+}
