@@ -1,4 +1,4 @@
-﻿<script setup>
+<script setup>
 import { computed,ref } from 'vue';
 import { cases } from '../../cases.mjs';
 import ScreenImage from '../../components/ScreenImage/ScreenImage.vue';
@@ -75,7 +75,7 @@ const fullScreenGroups = computed(() => story.value.fullScreenGroups);
         </div>
       </section>
     </article>
-    <section class="project-next case-width" aria-label="Следующий проект">
+    <section class="project-next" aria-label="Следующий проект">
       <a :href="other.slug+'.html'" class="project-next-link" @click="openNext">
         
         <div class="project-next-copy"><h2>{{other.brand}}</h2><span>Следующий кейс</span></div>
